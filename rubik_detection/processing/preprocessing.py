@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from rubix_detection.helpers import show
+from rubik_detection.helpers import show
 
 
 kernel = np.ones((3, 3), np.uint8)
