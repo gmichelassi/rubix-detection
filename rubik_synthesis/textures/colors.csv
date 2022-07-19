@@ -1,7 +1,0 @@
-face,color0,color1,color2,color3,color4,color5,color6,color7,color8
-FRONT,0,0,2,0,3,0,0,4,0
-BACK,0,0,2,0,3,0,0,4,0
-LEFT,0,3,1,0,3,0,5,4,0
-RIGHT,0,0,2,0,3,4,0,4,0
-TOP,0,0,2,0,3,3,0,4,0
-BOTTOM,0,0,2,0,3,0,2,4,0
