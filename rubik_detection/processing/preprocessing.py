@@ -12,7 +12,7 @@ def preprocessing(image: np.ndarray, show_results: bool = False) -> np.ndarray:
     blurred_image = cv2.bilateralFilter(grayscale_image, 11, 17, 17)
     edged_image = cv2.Canny(blurred_image, 50, 100)
     gradient_image = cv2.morphologyEx(edged_image, cv2.MORPH_GRADIENT, kernel)
-    dilated_image = cv2.dilate(gradient_image, None, iterations=1)
+    dilated_image = cv2.dilate(gradient_image, None, iterations=3)
 
     if show_results:
         show(image=image, name='Original')
