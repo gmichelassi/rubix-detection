@@ -1,0 +1,8 @@
+{
+    "front": ["red", "red", "orange", "green", "yellow", "yellow", "blue", "white", "white"],
+    "top": ["green", "orange", "red", "green", "orange", "white", "green", "green", "green"],
+    "left": ["white", "blue", "blue", "yellow", "green", "orange", "orange", "blue", "orange"],
+    "right": ["blue", "blue", "blue", "red", "white", "red", "yellow", "red", "red"],
+    "back": ["green", "white", "orange", "green", "blue", "orange", "yellow", "yellow", "yellow"],
+    "bottom": ["yellow", "yellow", "red", "orange", "red", "white", "white", "blue", "white"]
+}

@@ -1,0 +1,1 @@
+from rubik_synthesis.helpers.load_rubik_colors import load_rubik_colors
