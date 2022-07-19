@@ -1,7 +1,7 @@
 import cv2
 
-from rubix_detection.processing import preprocessing, get_contours, find_contour_with_max_area
-from rubix_detection.helpers import show
+from rubik_detection.processing import preprocessing, get_contours, find_contour_with_max_area
+from rubik_detection.helpers import show
 
 
 def main() -> None:

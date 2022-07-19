@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-from rubix_detection.helpers import show
+from rubik_detection.helpers import show
 
 
 def find_contour_with_max_area(contours: tuple, image: np.ndarray, should_show: bool = False):
