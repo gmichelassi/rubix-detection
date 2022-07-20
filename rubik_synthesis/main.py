@@ -6,10 +6,10 @@ from rubik_synthesis.helpers import load_rubik_colors
 
 
 def run(rubik_colors: dict):
+    window.color = color.black
     cubes = build_rubik_cube(rubik_colors)
 
     rotation_helper = Entity()
-    win_text_entity = Text(y=.35, text='', color=color.green, origin=(0, 0), scale=3)
 
     collider = Entity(model='cube', scale=3, collider='box', visible=False)
 
@@ -25,13 +25,6 @@ def run(rubik_colors: dict):
     def reset_rotation_helper():
         [setattr(e, 'world_parent', scene) for e in cubes]
         rotation_helper.rotation = (0, 0, 0)
-
-    def check_for_win():
-        if {e.world_rotation for e in cubes} == {Vec3(0, 0, 0)}:
-            win_text_entity.text = 'SOLVED!'
-            win_text_entity.appear()
-        else:
-            win_text_entity.text = ''
 
     def rotate_side(normal, direction=1, speed=1):
         if normal == Vec3(1, 0, 0):
@@ -60,7 +53,6 @@ def run(rubik_colors: dict):
         if speed:
             collider.ignore_input = True
             invoke(setattr, collider, 'ignore_input', False, delay=.24 * speed)
-            invoke(check_for_win, delay=.25 * speed)
 
 
 def main():
@@ -69,4 +61,7 @@ def main():
     app = Ursina()
     run(rubik_colors)
     EditorCamera()
+    pivot = Entity()
+    PointLight(parent=pivot, shadows=True)
+    AmbientLight(color=color.rgba(100, 100, 100, 0.000001))
     app.run()
