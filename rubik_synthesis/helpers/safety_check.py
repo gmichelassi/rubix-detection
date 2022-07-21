@@ -1,6 +1,9 @@
 from collections import Counter
 
 
+# Checks if the structure of the file is correct.
+# Each key must represent a face.
+# The value must be an array with 9 elements, representing the colors for each square in one face.
 def safety_check(rubik_colors: dict):
     for key in rubik_colors.keys():
         if key not in ["front", "top", "left", "right", "back", "bottom"]:

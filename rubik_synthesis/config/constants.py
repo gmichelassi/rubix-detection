@@ -6,6 +6,7 @@ POSITIONS = {
     2: 'front-back'
 }
 
+# Maps the string colors to the ursina engine colors
 CUBE_COLORS = {
     'white': color.white,
     'green': color.green,
