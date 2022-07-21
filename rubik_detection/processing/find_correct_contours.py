@@ -5,7 +5,7 @@ from itertools import combinations
 from rubik_detection.helpers import show
 
 
-def find_correct_contours(contours: tuple, image: np.ndarray, should_show: bool = False):
+def find_correct_contours(contours: list, image: np.ndarray, should_show: bool = False):
     areas = {}
     for index, individual_contour in enumerate(contours):
         area = cv2.contourArea(individual_contour)
@@ -24,7 +24,7 @@ def find_correct_contours(contours: tuple, image: np.ndarray, should_show: bool 
     minimum_criterion = min(criterias)
     selected_index = np.argmin(criterias)
 
-    if minimum_criterion > 0.1:
+    if minimum_criterion > 0.15:
         raise ValueError(
             f'Not possible to find 9 contours that match the criteria, try another image. Criteria: {minimum_criterion}'
         )
@@ -38,11 +38,6 @@ def find_correct_contours(contours: tuple, image: np.ndarray, should_show: bool 
         raise ValueError('Should be at least nine countours')
 
     if should_show:
-        print(f'Maiores areas: {biggest_areas[-9:]}')
-        print(f'Maximo {max(biggest_areas[-9:])}')
-        print(f'Desvio Padrao: {np.std(biggest_areas[-9:])}')
-        print(f'DP / MAX = {np.std(biggest_areas[-9:]) / max(biggest_areas[-9:])}')
-
         drawed_img = image.copy()
         for contour in biggest_contours:
             drawed_img = cv2.drawContours(drawed_img, [contour], 0, (0, 255, 0), 3)

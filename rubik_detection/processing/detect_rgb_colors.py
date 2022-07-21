@@ -25,7 +25,7 @@ def detect_rgb_colors(bounding_boxes: pd.DataFrame, image: np.ndarray, show_resu
 
             if show_results:
                 print(mean_color)
-                selected_area = cv2.rectangle(image.copy(), (x, y), (x + width, y + height), (0, 0, 255), 5)
+                selected_area = cv2.rectangle(image, (x, y), (x + width, y + height), (0, 0, 255), 5)
                 show(selected_area, 'Selected Area')
 
     return cube_colors
