@@ -1,2 +1,5 @@
 from rubik_detection.processing.preprocessing import preprocessing
 from rubik_detection.processing.contours import get_contours
+from rubik_detection.processing.find_correct_contours import find_correct_contours
+from rubik_detection.processing.find_and_sort_bounding_box_of_contours import find_and_sort_bounding_box_of_contours
+from rubik_detection.processing.detect_rgb_colors import detect_rgb_colors
