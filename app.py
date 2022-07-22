@@ -5,21 +5,27 @@ from rubik_synthesis import main as synthesis_main
 
 
 rubix_images = [
-    # 'teste1.JPG',  # funciona
-    # 'teste2.JPG',
-    # 'teste3.JPG',
-    # 'teste4.JPG',
-    # 'teste5.JPG',
-    # 'teste6.JPG',
-    # 'teste7.JPG',
-    # 'teste8.JPG',
-    # 'teste9.JPG',
-    # 'teste10.JPG',
-    # 'teste11.JPG',
-    # 'teste12.JPG',
+    'teste1.JPG',
+    'teste2.JPG',
+    'teste3.JPG',
+    'teste4.JPG',
+    'teste5.JPG',
+    'teste6.JPG',
+    'teste7.JPG',
+    'teste8.JPG',
+    'teste9.JPG',
+    'teste10.JPG',
+    'teste11.JPG',
+    'teste12.JPG',
+    'teste13.JPG',
+    'teste14.JPG',
+    'teste15.JPG',
+    'teste16.JPG',
+    'teste17.JPG',
+    'teste18.JPG',
     'will_work.JPG',
-    # 'wont_work_1.JPG',
-    # 'wont_work_2.JPG'
+    'wont_work_1.JPG',
+    'wont_work_2.JPG'
 ]
 
 
