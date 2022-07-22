@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 
 
+# Maps an RGB color to Natural Language. Used HSV values as helper.
 def map_colors(r: int, g: int, b: int) -> str:
     if is_white(r, g, b):
         return 'white'

@@ -1,5 +1,6 @@
 from ursina import color
 
+#  Maps a value in the ursina space coordinates to the direction of the vector.
 POSITIONS = {
     0: 'left-right',
     1: 'top-bottom',

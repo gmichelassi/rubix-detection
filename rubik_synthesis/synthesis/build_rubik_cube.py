@@ -3,6 +3,8 @@ from ursina import *
 from rubik_synthesis.config import CUBE_COLORS
 
 
+# To build the Rubik's it was necessary to create a total of 27 smaller cubes that each correspondes to a position
+# on the rubik's cube. Each smaller cube is called parent and is merged into the bigger Entity.
 def build_rubik_cube(rubik_colors):
     cubes = []
 
@@ -22,6 +24,8 @@ def build_rubik_cube(rubik_colors):
     return cubes
 
 
+# Builds a base cube given the correct color of its side. The color is determined by the x, y and z value. Each triple
+# x, y, z has a unique corresponding value in the json input file. This is based on the position of the real world cube.
 def build_parent(rubik_colors, x: int, y: int, z: int):
     if x == 0 and y == 0 and z == 0:
         parent = build_base_cube({

@@ -2,6 +2,11 @@ import pandas as pd
 from imutils.contours import sort_contours
 
 
+# This function only sorts the contours in the following order.
+# 6 7 8
+# 3 4 5
+# 0 1 2
+# This is done to match the Synthesis Project expected input.
 def find_and_sort_bounding_box_of_contours(contours: list) -> pd.DataFrame:
     _, top_to_bottom_bounding_boxes = sort_contours(contours, method="top-to-bottom")
 
